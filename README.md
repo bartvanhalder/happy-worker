@@ -23,4 +23,6 @@ Examples can be found in examples/
 
 A client can simply submit a job of its own choosing as a dict with happy-worker.submit({"Your":"job"})
 
-This job is wrapped in a ticket and stored in RethinkDB. Each worker will try to aquire a claim on a ticket. The worker that gets the lease gets the job dict back and is free to do with it what it wants (I suggest doing the job, but who am i to decide what your code does?) If the worker function throws an exception it will be stored in the database and the ticket's retry_left is decremented. When retry_left reaches 0 no worker will try to aquire a lease on this ticket so you can go and debug your code :) Maybe your monitoring system can monior the amount of dead tickets, or send an alert to the developer that created the bug ;)
+This job is wrapped in a ticket and stored in RethinkDB. Each worker will try to aquire a claim on a ticket. The worker that gets the lease gets the job dict back and is free to do with it what it wants (I suggest doing the job, but who am i to decide what your code does?) 
+
+If the worker function throws an exception it will be stored in the database and the ticket's retry_left is decremented. When retry_left reaches 0 no worker will try to aquire a lease on this ticket so you can go and debug your code :) Maybe your monitoring system can monior the amount of dead tickets, or send an alert to the developer that created the bug ;)
