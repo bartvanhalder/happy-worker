@@ -16,8 +16,6 @@ Examples can be found in examples/
   # python setup.py install
 ```
 
-Examples can be found in examples/
-
 
 ### Slightly deeper into the details
 
