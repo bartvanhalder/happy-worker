@@ -1,5 +1,5 @@
 # Happy worker
-### because a happy worker is a productive worker
+### Because a happy worker is a productive worker
 
 Happy-worker is a small(191 lines) distributed task runner built on top of RethinkDB for people who like to read/edit/adapt/maintain the code they depend on.
 
